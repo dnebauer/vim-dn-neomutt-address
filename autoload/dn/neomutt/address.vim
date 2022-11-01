@@ -131,9 +131,12 @@ function! dn#neomutt#address#completion(findstart, base)
             " - extract email phrase and address
             call map(l:matches, function('s:extract_address'))
 
-            for l:match in l:matches
-                if complete_check() | break | endif
-                call complete_add(l:match)
+            for m in l:matches
+                if complete_check()
+                    break
+                endif
+
+                call complete_add(m)
             endfor
             return []
         endif
