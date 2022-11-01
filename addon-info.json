@@ -1,0 +1,5 @@
+{
+           "name": "vim-dn-neomutt-address",
+         "author": "David Nebauer",
+    "description": "Email address completion using neomutt aliases file"
+}
