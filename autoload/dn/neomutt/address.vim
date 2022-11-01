@@ -47,7 +47,7 @@ set cpoptions&vim
 
 " }}}1
 
-# Script functions
+" Script functions
 
 " s:extract_address(key, val)    {{{1
 
