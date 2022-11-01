@@ -122,16 +122,16 @@ function! dn#neomutt#address#completion(findstart, base)
                 throw l:msg
             endif
             " - slurp alias definitions
-            let l:matches = readfile(l:aliases_file)
-            if empty(l:matches)
+            let matches = readfile(l:aliases_file)
+            if empty(matches)
                 let l:msg = 'ERROR(NoAliases): No addresses found in '
                             \ . 'aliases file: ' . l:aliases_file
                 throw l:msg
             endif
             " - extract email phrase and address
-            call map(l:matches, function('s:extract_address'))
+            call map(matches, function('s:extract_address'))
 
-            for m in l:matches
+            for m in matches
                 if complete_check()
                     break
                 endif
