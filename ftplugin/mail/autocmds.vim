@@ -23,7 +23,7 @@ set cpoptions&vim
 " - vimdoc does not automatically generate autocmds section
 
 ""
-" @section Autocommands, autocmds-mail
+" @section Autocommands, autocmds
 " The @function(dn#neomutt#address#completion) provides email address
 " completion for "mail" filetypes using email addresses from the neomutt
 " aliases file. The autocmd responsible for this completion behaviour can be

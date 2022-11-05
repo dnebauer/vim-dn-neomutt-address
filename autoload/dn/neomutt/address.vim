@@ -15,7 +15,7 @@ set cpoptions&vim
 ""
 " @section Introduction, intro
 " @library
-" @order credits intro usage config autocmds-mail autocmds-notmuch-compose
+" @order credits intro usage config autocmds
 " This plugin enables completion of email addresses using a neomutt alias
 " file.
 "

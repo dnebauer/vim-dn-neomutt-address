@@ -7,9 +7,8 @@ CONTENTS                                     *vim-dn-neomutt-address-contents*
   2. Introduction...............................|vim-dn-neomutt-address-intro|
   3. Usage......................................|vim-dn-neomutt-address-usage|
   4. Configuration.............................|vim-dn-neomutt-address-config|
-  5. Functions..............................|vim-dn-neomutt-address-functions|
-  6. Autocommands.......................|vim-dn-neomutt-address-autocmds-mail|
-  7. Autocommands............|vim-dn-neomutt-address-autocmds-notmuch-compose|
+  5. Autocommands............................|vim-dn-neomutt-address-autocmds|
+  6. Functions..............................|vim-dn-neomutt-address-functions|
 
 ==============================================================================
 CREDITS                                       *vim-dn-neomutt-address-credits*
@@ -50,9 +49,14 @@ alias definitions. If not set, the default filepath is
 If this buffer variable exists and is set to a true value, e.g., "1", neomutt
 address completion will be disabled for the "mail" filetype.
 
-                             *b:disable_dn_neomutt_notmuch_compose_completion*
-If this buffer variable exists and is set to a true value, e.g., "1", neomutt
-address completion will be disabled for the "notmuch-compose" filetype.
+==============================================================================
+AUTOCOMMANDS                                 *vim-dn-neomutt-address-autocmds*
+
+The |dn#neomutt#address#completion()| provides email address completion for
+"mail" filetypes using email addresses from the neomutt aliases file. The
+autocmd responsible for this completion behaviour can be found in the
+"dn_neomutt_address_mail" autocmd group (see |autocmd-groups|) and can be
+viewed (see |autocmd-list|).
 
 ==============================================================================
 FUNCTIONS                                   *vim-dn-neomutt-address-functions*
@@ -74,24 +78,6 @@ dn#neomutt#address#completion({findstart}, {base})
 
   Throws ERROR(NoFile) if unable to locate the neomutt aliases file
   Throws ERROR(NoAliases) if no email addresses are found in the aliases file
-
-==============================================================================
-AUTOCOMMANDS                            *vim-dn-neomutt-address-autocmds-mail*
-
-The |dn#neomutt#address#completion()| provides email address completion for
-"mail" filetypes using email addresses from the neomutt aliases file. The
-autocmd responsible for this completion behaviour can be found in the
-"dn_neomutt_address_mail" autocmd group (see |autocmd-groups|) and can be
-viewed (see |autocmd-list|).
-
-==============================================================================
-AUTOCOMMANDS                 *vim-dn-neomutt-address-autocmds-notmuch-compose*
-
-The |dn#neomutt#address#completion()| provides email address completion for
-"notmuch-compose" filetypes using email addresses provided by notmuch. The
-autocmd responsible for this completion behaviour can be found in the
-"dn_neomutt_address_notmuch_compose" autocmd group (see |autocmd-groups|) and
-can be viewed (see |autocmd-list|).
 
 
 vim:tw=78:ts=8:ft=help:norl:
